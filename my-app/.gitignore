@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*storybook.log
+storybook-static
+
+# Spec-kit agent folder (may contain credentials)
+.github/
