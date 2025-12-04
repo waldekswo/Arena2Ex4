@@ -1,0 +1,105 @@
+/* HUD Component Styles */
+
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+  border: 3px solid #999;
+  border-top-color: #666;
+  border-left-color: #666;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.counter,
+.timer {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d32f2f;
+  background: #222;
+  padding: 8px 12px;
+  border-radius: 4px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.resetButton {
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fff 0%, #e8e8e8 100%);
+  border: 2px solid #fff;
+  border-right-color: #999;
+  border-bottom-color: #999;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.resetButton:hover {
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  transform: scale(1.05);
+}
+
+.resetButton:active {
+  background: #d8d8d8;
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.status {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+  .hud {
+    gap: 10px;
+    padding: 12px 15px;
+    max-width: 100%;
+  }
+
+  .counter,
+  .timer {
+    font-size: 18px;
+    padding: 6px 10px;
+    min-width: 60px;
+  }
+
+  .resetButton {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hud {
+    max-width: 480px;
+  }
+}

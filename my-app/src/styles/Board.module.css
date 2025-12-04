@@ -1,0 +1,35 @@
+/* Board Component Styles */
+
+.board {
+  display: inline-block;
+  background: #e0e0e0;
+  padding: 10px;
+  border: 3px solid #999;
+  border-top-color: #666;
+  border-left-color: #666;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  gap: 0;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* Mobile - smaller spacing */
+@media (max-width: 767px) {
+  .board {
+    padding: 8px;
+  }
+}
+
+/* Tablet and Desktop - larger spacing */
+@media (min-width: 768px) {
+  .board {
+    padding: 12px;
+  }
+}

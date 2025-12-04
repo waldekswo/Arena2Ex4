@@ -9,9 +9,9 @@ describe('App', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('renders the placeholder text', () => {
+  it('renders the game instructions', () => {
     render(<App />);
-    const placeholder = screen.getByText(/Game will be implemented here/i);
-    expect(placeholder).toBeInTheDocument();
+    const instructions = screen.getByText(/Left click to reveal/i);
+    expect(instructions).toBeInTheDocument();
   });
 });
